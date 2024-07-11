@@ -4,10 +4,13 @@ import kotlin.math.roundToInt
 
 const val CRYSTALLINE_ORE = 7
 const val IRON_ORE = 11
+const val TWENTY_PERSENT = 0.2
 
-fun main(){
-    val crystalline_ore_by_buff:Double = CRYSTALLINE_ORE * 0.2
-    val iron_ore_by_buff:Double = IRON_ORE * 0.2
-    print("Бафф дает ${crystalline_ore_by_buff.roundToInt()} кристаллической руды и " +
-            "${iron_ore_by_buff.roundToInt()} железной руды")
+fun main() {
+    val crystallineOreByBuff: Double = CRYSTALLINE_ORE * TWENTY_PERSENT
+    val ironOreByBuff: Double = IRON_ORE * TWENTY_PERSENT
+    print(
+        "Бафф дает ${crystallineOreByBuff.roundToInt()} кристаллической руды и " +
+                "${ironOreByBuff.roundToInt()} железной руды"
+    )
 }
