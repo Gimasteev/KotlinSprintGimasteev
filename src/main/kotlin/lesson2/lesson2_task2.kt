@@ -1,16 +1,16 @@
 package org.example.lesson2
 
-const val SALARIES_OF_PERMANENT_EMPLOYEES = 30000
-const val SALARIES_OF_INTERNS = 20000
-const val NUMBER_OF_INTERNS = 30
-const val NUMBER_OF_PERMANENT_EMPLOYEES = 50
-
 fun main() {
-    val expenditureOfPermanentEmployees = SALARIES_OF_PERMANENT_EMPLOYEES * NUMBER_OF_PERMANENT_EMPLOYEES
+    val salariesOfPermanentEmployees = 30000
+    val salariesOfInterns = 20000
+    val numberOfInterns = 30
+    val numberOfPermanentEmployees = 50
+
+    val expenditureOfPermanentEmployees = salariesOfPermanentEmployees * numberOfPermanentEmployees
     println("Расходы на выплату зарплаты постоянных сотрудников = $expenditureOfPermanentEmployees")
-    val expenditureAll = SALARIES_OF_PERMANENT_EMPLOYEES * NUMBER_OF_PERMANENT_EMPLOYEES +
-            SALARIES_OF_INTERNS * NUMBER_OF_INTERNS
+    val expenditureAll = salariesOfPermanentEmployees * numberOfPermanentEmployees +
+            salariesOfInterns * numberOfInterns
     println("Общие расходы по ЗП = $expenditureAll")
-    val averageSalaryOfOneEmployee = expenditureAll / (NUMBER_OF_INTERNS + NUMBER_OF_PERMANENT_EMPLOYEES)
+    val averageSalaryOfOneEmployee = expenditureAll / (numberOfInterns + numberOfPermanentEmployees)
     print("Средняя ЗП одного сотрудника = $averageSalaryOfOneEmployee")
 }
