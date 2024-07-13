@@ -4,13 +4,14 @@ import java.math.RoundingMode
 import java.text.DecimalFormat
 import kotlin.math.pow
 
-const val START_SUMM = 70_000
-const val YEAR_PERCENT = 0.167
-const val INVESTMENT_PERIOD = 20
+const val ONE_HUNDRED_PERCENT = 100
 
 fun main() {
-    val totalAmount: Double = START_SUMM * (1 + YEAR_PERCENT).pow(INVESTMENT_PERIOD)
+    val startSum = 70_000
+    val yearPercent = 16.7
+    val investmentPeriod = 20
+    val totalAmount: Double = startSum * (1 + yearPercent / ONE_HUNDRED_PERCENT).pow(investmentPeriod)
     val df = DecimalFormat("#.###")
     df.roundingMode = RoundingMode.DOWN
-    print("Размер вклада через $INVESTMENT_PERIOD лет составит = ${df.format(totalAmount)}")
+    print("Размер вклада через $investmentPeriod лет составит = ${df.format(totalAmount)}")
 }
