@@ -1,7 +1,6 @@
 package org.example.lesson3
 
 const val USER_NAME = "Роман"
-
 fun main() {
     val helloTextDay = "Добрый день"
     val helloTextNight = "Добрый вечер"
