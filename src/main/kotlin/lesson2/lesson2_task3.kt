@@ -4,10 +4,9 @@ const val MINUTES_IN_HOUR = 60
 
 fun main() {
     val timeStartHours = 9
-    var timeStartMinutes = 39
-    timeStartMinutes = timeStartHours * MINUTES_IN_HOUR + 39
-    val timeTravelling = 457
-    val timeEndHours = (timeStartMinutes + timeTravelling) / MINUTES_IN_HOUR
-    val timeEndMinutes = (timeStartMinutes + timeTravelling) % MINUTES_IN_HOUR
+    val timeStartMinutes = 39
+    val timeTravellingMinutes = 457
+    val timeEndHours = (timeStartMinutes + timeStartHours * MINUTES_IN_HOUR + timeTravellingMinutes) / MINUTES_IN_HOUR
+    val timeEndMinutes = (timeStartMinutes + timeStartHours * MINUTES_IN_HOUR + timeTravellingMinutes) % MINUTES_IN_HOUR
     print("Время прибытия поезда = $timeEndHours:$timeEndMinutes")
 }
