@@ -5,10 +5,10 @@ const val MIN_LOAD_KG = 35
 const val MAX_VOLUME_L = 100
 
 fun main() {
-    val firstCargoWeight = 20
-    val firstCargoVolume = 80
-    println("Груз с весом $firstCargoWeight кг и объемом $firstCargoVolume л соответствует категории 'Average': ${(firstCargoWeight > MIN_LOAD_KG) and (firstCargoWeight <= MAX_LOAD_KG) and (firstCargoVolume < MAX_VOLUME_L)}")
-    val secondCargoWeight = 50
-    val secondCargoVolume = 100
-    println("Груз с весом $secondCargoWeight кг и объемом $secondCargoVolume л соответствует категории 'Average': ${secondCargoWeight > MIN_LOAD_KG && secondCargoWeight <= MAX_LOAD_KG && secondCargoVolume < MAX_VOLUME_L}")
+    var weight = 20
+    var volume = 80
+    println("Груз с весом $weight кг и объемом $volume л соответствует категории 'Average': ${(weight > MIN_LOAD_KG) and (weight <= MAX_LOAD_KG) and (volume < MAX_VOLUME_L)}")
+    weight = 50
+    volume = 100
+    println("Груз с весом $weight кг и объемом $volume л соответствует категории 'Average': ${(weight > MIN_LOAD_KG) and (weight <= MAX_LOAD_KG) and (volume < MAX_VOLUME_L)}")
 }
