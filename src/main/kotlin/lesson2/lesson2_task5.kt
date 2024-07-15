@@ -4,7 +4,7 @@ import java.math.RoundingMode
 import java.text.DecimalFormat
 import kotlin.math.pow
 
-const val ONE_HUNDRED_PERCENT = 100
+const val ONE_HUNDRED_PERCENT = 100.0
 
 fun main() {
     val startSum = 70_000
