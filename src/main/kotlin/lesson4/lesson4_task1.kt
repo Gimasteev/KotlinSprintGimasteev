@@ -1,7 +1,6 @@
 package org.example.lesson4
 
 const val TABLES = 13
-
 fun main() {
     val reserveTablesToday = 13
     val reserveTablesTomorrow = 9
