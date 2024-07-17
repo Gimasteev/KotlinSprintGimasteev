@@ -1,13 +1,18 @@
 package org.example.lesson5
 
+import java.time.Year
+
 const val MAJORITY = 18
-const val NOW_YEAR = 2024
 
 fun main() {
+    val currentYear = Year.now().value
     println("Введите год рождения")
     val age = readln().toInt()
-    if (NOW_YEAR - age >= MAJORITY)
+    if (currentYear - age >= MAJORITY)
         println("Показать экран со скрытым контентом")
     else
         println("Доступ закрыт")
 }
+
+
+
