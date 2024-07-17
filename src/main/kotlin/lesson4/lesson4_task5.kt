@@ -6,14 +6,14 @@ const val BOX_SIZE = 50
 
 
 fun main() {
-    println("Наличие повреждений корпуса? (Y/N)")
-    val shipBody = readLine()
+    println("Наличие повреждений корпуса? (true/false)")
+    val isDamaged = readln().toBoolean()
     println("Текущий состав экипажа")
-    val crew = readLine()!!.toInt()
+    val numberOfCrew = readln().toInt()
     println("Количество ящиков с провизией на борту")
-    val box = readLine()!!.toInt()
-    println("Хорошая погода? (Y/N)")
-    val weather = readLine()
-    val result = (shipBody == "N" && crew >= CREW_SIZE_MIN && crew <= CREW_SIZE_MAX && box > CREW_SIZE_MIN && (weather == "Y" || weather == "N")) || (shipBody == "Y" && crew == CREW_SIZE_MAX && box >= BOX_SIZE && weather == "Y")
+    val numberOfBoxes = readln().toInt()
+    println("Хорошая погода? (true/false)")
+    val isWeatherGood = readln().toBoolean()
+    val result = (!isDamaged && numberOfCrew >= CREW_SIZE_MIN && numberOfCrew <= CREW_SIZE_MAX && numberOfBoxes > BOX_SIZE ) || (numberOfCrew == CREW_SIZE_MAX && numberOfBoxes >= BOX_SIZE && isWeatherGood)
     println("Научно-исследовательский корабль может приступить к долгосрочному плаванию: $result")
 }
